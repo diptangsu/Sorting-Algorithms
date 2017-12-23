@@ -19,16 +19,21 @@ public class BubbleSort {
         System.out.println();
     }
 
-    private static void bubbleSort(int arr[]) {
+    static void bubbleSort(int arr[]) {
         int len = arr.length, tmp;
+        boolean flag;
         for (int i = 0; i < len; i++) {
+            flag = false;
             for (int j = 0; j < len - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     tmp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = tmp;
+                    flag = true;
                 }
             }
+            if (!flag)
+                break;
         }
     }
 }

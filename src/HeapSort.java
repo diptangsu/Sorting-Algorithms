@@ -17,7 +17,7 @@ public class HeapSort {
 
     }
 
-    private static void heapSort(int arr[]) {
+    static void heapSort(int arr[]) {
         makeMaxHeap(arr);
         int tmp;
         for (int i = arr.length - 1; i > 0; i--) {

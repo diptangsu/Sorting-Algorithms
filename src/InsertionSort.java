@@ -19,7 +19,7 @@ public class InsertionSort {
         System.out.println();
     }
 
-    private static void insertionSort(int arr[]) {
+    static void insertionSort(int arr[]) {
         int len = arr.length, tmp, j;
         for (int i = 1; i < len; i++) {
             tmp = arr[i];

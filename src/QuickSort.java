@@ -23,7 +23,7 @@ public class QuickSort {
      * @param lower lower index
      * @param upper upper index
      */
-    private static void quickSort(int arr[], int lower, int upper) {
+    static void quickSort(int arr[], int lower, int upper) {
         if (lower >= upper)
             return;
         int p = partition(arr, lower, upper);

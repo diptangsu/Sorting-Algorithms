@@ -19,7 +19,7 @@ public class SelectionSort {
         System.out.println();
     }
 
-    private static void selectionSort(int arr[]) {
+    static void selectionSort(int arr[]) {
         int len = arr.length, pos, tmp;
         for (int i = 0; i < len; i++) {
             pos = i;
