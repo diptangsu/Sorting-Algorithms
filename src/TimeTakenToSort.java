@@ -72,5 +72,12 @@ public class TimeTakenToSort {
         endTime = System.nanoTime();
         duration = endTime - startTime;
         System.out.println("Merge Sort\t\t\t" + duration);
+
+        System.arraycopy(arr, 0, arr2, 0, size);
+        startTime = System.nanoTime();
+        RadixSort.radixSort(arr2);
+        endTime = System.nanoTime();
+        duration = endTime - startTime;
+        System.out.println("Radix Sort\t\t\t" + duration);
     }
 }
