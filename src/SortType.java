@@ -5,6 +5,8 @@ public enum SortType {
     INSERTION,
     MERGE,
     QUICK,
-    SELECTION
+    SELECTION,
+    CYCLE,
+    SHELL
 }
 

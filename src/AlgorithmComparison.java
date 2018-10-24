@@ -37,6 +37,8 @@ public class AlgorithmComparison {
         printSortingTime(SortType.MERGE, arr);
         printSortingTime(SortType.QUICK, arr);
         printSortingTime(SortType.SELECTION, arr);
+        printSortingTime(SortType.CYCLE, arr);
+        printSortingTime(SortType.SHELL, arr);
     }
 
     private static void printSortingTime(SortType sortType, int[] arr) {
@@ -64,6 +66,12 @@ public class AlgorithmComparison {
                 break;
             case SELECTION:
                 SelectionSort.selectionSort(arr2);
+                break;
+            case CYCLE:
+                CycleSort.cycleSort(arr2,0);
+                break;
+            case SHELL:
+                ShellSort.shellSort(arr2);
                 break;
         }
 
