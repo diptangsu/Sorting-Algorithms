@@ -79,5 +79,12 @@ public class TimeTakenToSort {
         endTime = System.nanoTime();
         duration = endTime - startTime;
         System.out.println("Cycle Sort\t\t\t" + duration);
+      
+        System.arraycopy(arr, 0, arr2, 0, size);
+        startTime = System.nanoTime();
+        ShellSort.shellSort(arr2);
+        endTime = System.nanoTime();
+        duration = endTime - startTime;
+        System.out.println("Shell Sort\t\t\t" + duration);
     }
 }
