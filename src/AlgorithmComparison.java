@@ -32,6 +32,7 @@ public class AlgorithmComparison {
     private static void compareSortingAlgorithms(int arr[]) {
 
         printSortingTime(SortType.BUBBLE, arr);
+        printSortingTime(SortType.COMB, arr);
         printSortingTime(SortType.HEAP, arr);
         printSortingTime(SortType.INSERTION, arr);
         printSortingTime(SortType.MERGE, arr);
@@ -51,6 +52,9 @@ public class AlgorithmComparison {
         switch (sortType) {
             case BUBBLE:
                 BubbleSort.bubbleSort(arr2);
+                break;
+            case COMB:
+                CombSort.combSort(arr2);
                 break;
             case HEAP:
                 HeapSort.heapSort(arr2);
