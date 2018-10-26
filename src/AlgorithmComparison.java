@@ -41,6 +41,7 @@ public class AlgorithmComparison {
         printSortingTime(SortType.CYCLE, arr);
         printSortingTime(SortType.SHELL, arr);
         printSortingTime(SortType.INTRO, arr);
+        printSortingTime(SortType.GNOME, arr);
     }
 
     private static void printSortingTime(SortType sortType, int[] arr) {
@@ -80,6 +81,9 @@ public class AlgorithmComparison {
                 break;
             case INTRO:
             	IntroSort.introSort(arr2, 0, arr2.length - 1, IntroSort.calcDepth(arr2));
+            case GNOME:
+                GnomeSort.gnomeSort(arr2);
+                break;
         }
 
         long endTime = System.nanoTime();

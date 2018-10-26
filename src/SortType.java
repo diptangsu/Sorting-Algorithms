@@ -8,6 +8,8 @@ public enum SortType {
     SELECTION,
     CYCLE,
     SHELL,
-    INTRO
+    INTRO,
+    COMB,
+    GNOME
 }
 
