@@ -65,6 +65,9 @@ Also known as Permutation Sort. Stupid Sort, Slowsort, Shotgun Sort, or Monkey S
 ## Shell Sort
 Shellsort, also known as Shell sort or Shell's method, is an in-place comparison sort. It can be seen as either a generalization of sorting by exchange (bubble sort) or sorting by insertion (insertion sort).The method starts by sorting pairs of elements far apart from each other, then progressively reducing the gap between elements to be compared. Starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange. Donald Shell published the first version of this sort in 1959.The running time of Shellsort is heavily dependent on the gap sequence it uses. For many practical variants, determining their time complexity remains an open problem.
 
+## Comparison Sort
+Comparison sorts compare elements at each step of the algorithm to determine if one element should be to the left or right of another element.
+Comparison sorts are usually more straightforward to implement than integer sorts, but comparison sorts are limited by a lower bound of Ω(n log n), meaning that, on average, comparison sorts cannot be faster than Ω(n log n). A lower bound for an algorithm is the worst-case running time of the best possible algorithm for a given problem. The "on average" part here is important: there are many algorithms that run in very fast time if the inputted list is already sorted, or has some very particular (and overall unlikely) property. There is only one permutation of a list that is sorted, but n! possible lists, so the chances that the input is already sorted is very unlikely, and on average, the list will not be very sorted.
 
 # Contribute
 1. Fork this repository
