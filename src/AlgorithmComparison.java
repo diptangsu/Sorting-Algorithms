@@ -40,6 +40,7 @@ public class AlgorithmComparison {
         printSortingTime(SortType.SELECTION, arr);
         printSortingTime(SortType.CYCLE, arr);
         printSortingTime(SortType.SHELL, arr);
+        printSortingTime(SortType.GNOME, arr);
     }
 
     private static void printSortingTime(SortType sortType, int[] arr) {
@@ -76,6 +77,9 @@ public class AlgorithmComparison {
                 break;
             case SHELL:
                 ShellSort.shellSort(arr2);
+                break;
+            case GNOME:
+                GnomeSort.gnomeSort(arr2);
                 break;
         }
 
