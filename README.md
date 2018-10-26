@@ -185,6 +185,11 @@ Time complexity analysis:
 |---|---|
 |Yes|No|
 
+
+## IntroSort
+Introsort or introspective sort is a hybrid sorting algorithm that provides both fast average performance and (asymptotically) optimal worst-case performance. It begins with quicksort and switches to heapsort when the recursion depth exceeds a level based on (the logarithm of) the number of elements being sorted. This combines the good parts of both algorithms, with practical performance comparable to quicksort on typical data sets and worst-case O(n log n) runtime due to the heap sort. Since both algorithms it uses are comparison sorts, it too is a comparison sort.
+
+
 ## Comparison Sort
 Comparison sorts compare elements at each step of the algorithm to determine if one element should be to the left or right of another element.
 Comparison sorts are usually more straightforward to implement than integer sorts, but comparison sorts are limited by a lower bound of Ω(n log n), meaning that, on average, comparison sorts cannot be faster than Ω(n log n). A lower bound for an algorithm is the worst-case running time of the best possible algorithm for a given problem. The "on average" part here is important: there are many algorithms that run in very fast time if the inputted list is already sorted, or has some very particular (and overall unlikely) property. There is only one permutation of a list that is sorted, but n! possible lists, so the chances that the input is already sorted is very unlikely, and on average, the list will not be very sorted.
