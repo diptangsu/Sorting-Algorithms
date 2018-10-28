@@ -254,12 +254,44 @@ Time complexity analysis:
 |Yes|No|
 
 
+## Tim sort
+
+Timsort is a hybrid stable sorting algorithm, derived from merge sort and insertion sort, designed to perform well on many kinds of real-world data. It uses techniques from Peter McIlroy's "Optimistic Sorting and Information Theoretic Complexity", in Proceedings of the Fourth Annual ACM-SIAM Symposium on Discrete Algorithms, pp. 467–474, January 1993. It was implemented by Tim Peters in 2002 for use in the Python programming language. The algorithm finds subsequences of the data that are already ordered, and uses that knowledge to sort the remainder more efficiently. This is done by merging an identified subsequence, called a run, with existing runs until certain criteria are fulfilled. Timsort has been Python's standard sorting algorithm since version 2.3. It is also used to sort arrays of non-primitive type in Java SE 7, on the Android platform, and in GNU Octave.
+
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(n log(n))|O(n log(n)|O(n)|
+
+|In-place?|Stable?|
+|---|---|
+|No|Yes|
+
+
+## Tournament sort
+
+Tournament sort improves upon the naive selection sort by using a priority queue to find the next element in the sort. In the naive selection sort, it takes O(n) operations to select the next element of n elements; in a tournament sort, it takes O(log n) operations (after building the initial tournament in O(n)). Tournament sort is a variation of heapsort. 
+
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(n log(n))|O(n log(n)|O(n log(n))|
+
+|In-place?|Stable?|
+|---|---|
+|No|No|
+
+
+
 ### IN SHORT:
 Red and black is used for searching whereas for sorting it is better to use Heapsort(for local projects).The time complexity is for the worst case is "2nlogn" and best case is "n". But it is not stable, if you prefer the stable sort it is better to use the merge sort. O(n) = n log n. If the sorting is for priority of top 10 or least 10, then use priority Queue. (Max-PQ and Min-PQ).
 Source : (use this links for the code, it is an industrial code and the code is written in generics(can use any datatypes))
 Heap: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Heap.java.html
 Merge: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.html
 For other sorting and searching algorithms: https://algs4.cs.princeton.edu/code/
+
 
 
 # Contribute
