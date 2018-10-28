@@ -189,21 +189,34 @@ Time complexity analysis:
 ## IntroSort
 Introsort or introspective sort is a hybrid sorting algorithm that provides both fast average performance and (asymptotically) optimal worst-case performance. It begins with quicksort and switches to heapsort when the recursion depth exceeds a level based on (the logarithm of) the number of elements being sorted. This combines the good parts of both algorithms, with practical performance comparable to quicksort on typical data sets and worst-case O(n log n) runtime due to the heap sort. Since both algorithms it uses are comparison sorts, it too is a comparison sort.
 
+Time complexity analysis:
 
-## Comparison Sort
-Comparison sorts compare elements at each step of the algorithm to determine if one element should be to the left or right of another element.
-Comparison sorts are usually more straightforward to implement than integer sorts, but comparison sorts are limited by a lower bound of Ω(n log n), meaning that, on average, comparison sorts cannot be faster than Ω(n log n). A lower bound for an algorithm is the worst-case running time of the best possible algorithm for a given problem. The "on average" part here is important: there are many algorithms that run in very fast time if the inputted list is already sorted, or has some very particular (and overall unlikely) property. There is only one permutation of a list that is sorted, but n! possible lists, so the chances that the input is already sorted is very unlikely, and on average, the list will not be very sorted.
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(n log(n))|O(n log(n))|O(n log(n))|
+
+|In-place?|Stable?|
+|---|---|
+|Yes|No|
 
 
 ## Bucket Sort
 Bucket sort is a sorting algorithm that involves first putting elements that need to be sorted into "buckets", sorting these buckets and then merging the results to get the sorted list.  It is best used on data that is uniformly distributed over a range and can perform quite well, O(n + m) (where n is the number of elements in the list and m is the number of buckets used).  The buckets are typically stored as an array of linked lists so there is an additional space requirement for this sorting algorithm.
 For example, if there is a list of numbers in the range 1 to 1000 we can have 10 buckets.  All numbers between 1 and 100 get added to the first bucket, between 101 and 200 get added to the second bucket, etc.  After all numbers have been added to the appropriate bucket insertion sort is applied to all the buckets.  This step is the bottleneck for the algorithm.  If the data is not clustered tightly than the sorts can be completed in linear time despite the fact that insertion sort is O(n<sup>2</sup>). The algorithm degrades as certain buckets get more of the numbers, the worst case being when all the numbers are in a single bucket.  The data in the input array must uniformly distributed across the range of bucket values to avoid the polynomial time.  The size of each bucket should be equal to the number of buckets.  As bucket sort is polynomial in the worse case Quicksort is a more optimal sorting algorithm.
 
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(n<sup>2</sup>)|θ(n+k)|Ω(n+k)|
+
+|In-place?|Stable?|
+|---|---|
+|Yes|Yes|
+
 
 ## Gnome sort
-Gnome sort (dubbed Stupid sort) is a sorting algorithm originally proposed by an Iranian computer scientist Hamid Sarbazi-Azad (Professor of Computer Engineering at Sharif University of Technology) in 2000. The sort was first called "stupid sort" (not to be confused with bogosort), and then later on described by Dick Grune and named "gnome sort".
-
-The gnome sort is a sorting algorithm which is similar to insertion sort, except that moving an element to its proper place is accomplished by a series of swaps, similar to a bubble sort. It is conceptually simple, requiring no nested loops. The average, or expected, running time is O(n2) but tends towards O(n) if the list is initially almost sorted.
+Gnome sort is a sorting algorithm which is similar to insertion sort, except that moving an element to its proper place is accomplished by a series of swaps, similar to a bubble sort. It is conceptually simple, requiring no nested loops. The average, or expected, running time is O(n2) but tends towards O(n) if the list is initially almost sorted.
 
 The algorithm always finds the first place where two adjacent elements are in the wrong order and swaps them. It takes advantage of the fact that performing a swap can introduce a new out-of-order adjacent pair next to the previously swapped elements. It does not assume that elements forward of the current position are sorted, so it only needs to check the position directly previous to the swapped elements. 
 
