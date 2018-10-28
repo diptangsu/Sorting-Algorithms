@@ -199,12 +199,32 @@ Comparison sorts are usually more straightforward to implement than integer sort
 Bucket sort is a sorting algorithm that involves first putting elements that need to be sorted into "buckets", sorting these buckets and then merging the results to get the sorted list.  It is best used on data that is uniformly distributed over a range and can perform quite well, O(n + m) (where n is the number of elements in the list and m is the number of buckets used).  The buckets are typically stored as an array of linked lists so there is an additional space requirement for this sorting algorithm.
 For example, if there is a list of numbers in the range 1 to 1000 we can have 10 buckets.  All numbers between 1 and 100 get added to the first bucket, between 101 and 200 get added to the second bucket, etc.  After all numbers have been added to the appropriate bucket insertion sort is applied to all the buckets.  This step is the bottleneck for the algorithm.  If the data is not clustered tightly than the sorts can be completed in linear time despite the fact that insertion sort is O(n<sup>2</sup>). The algorithm degrades as certain buckets get more of the numbers, the worst case being when all the numbers are in a single bucket.  The data in the input array must uniformly distributed across the range of bucket values to avoid the polynomial time.  The size of each bucket should be equal to the number of buckets.  As bucket sort is polynomial in the worse case Quicksort is a more optimal sorting algorithm.
 
-IN SHORT:
+
+## Gnome sort
+Gnome sort (dubbed Stupid sort) is a sorting algorithm originally proposed by an Iranian computer scientist Hamid Sarbazi-Azad (Professor of Computer Engineering at Sharif University of Technology) in 2000. The sort was first called "stupid sort" (not to be confused with bogosort), and then later on described by Dick Grune and named "gnome sort".
+
+The gnome sort is a sorting algorithm which is similar to insertion sort, except that moving an element to its proper place is accomplished by a series of swaps, similar to a bubble sort. It is conceptually simple, requiring no nested loops. The average, or expected, running time is O(n2) but tends towards O(n) if the list is initially almost sorted.
+
+The algorithm always finds the first place where two adjacent elements are in the wrong order and swaps them. It takes advantage of the fact that performing a swap can introduce a new out-of-order adjacent pair next to the previously swapped elements. It does not assume that elements forward of the current position are sorted, so it only needs to check the position directly previous to the swapped elements. 
+
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(n<sup>2</sup>)|O(n<sup>2</sup>)|Ω(n<sup>2</sup>)|
+
+|In-place?|Stable?|
+|---|---|
+|Yes|Yes|
+
+
+### IN SHORT:
 Red and black is used for searching whereas for sorting it is better to use Heapsort(for local projects).The time complexity is for the worst case is "2nlogn" and best case is "n". But it is not stable, if you prefer the stable sort it is better to use the merge sort. O(n) = n log n. If the sorting is for priority of top 10 or least 10, then use priority Queue. (Max-PQ and Min-PQ).
 Source : (use this links for the code, it is an industrial code and the code is written in generics(can use any datatypes))
 Heap: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Heap.java.html
 Merge: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.html
 For other sorting and searching algorithms: https://algs4.cs.princeton.edu/code/
+
 
 # Contribute
 1. Fork this repository

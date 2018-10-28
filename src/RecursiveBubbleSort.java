@@ -2,12 +2,12 @@
 // Java program for recursive implementation 
 // of Bubble sort 
   
-import java.util.Arrays; 
-  
-public class RecursiveBubble 
+import java.util.Arrays;
+
+public class RecursiveBubbleSort
 { 
     // A function to implement bubble sort 
-    static void bubbleSort(int arr[], int n) 
+    private static void bubbleSort(int arr[], int n)
     { 
         // Base case 
         if (n == 1) 
