@@ -200,6 +200,24 @@ Bucket sort is a sorting algorithm that involves first putting elements that nee
 For example, if there is a list of numbers in the range 1 to 1000 we can have 10 buckets.  All numbers between 1 and 100 get added to the first bucket, between 101 and 200 get added to the second bucket, etc.  After all numbers have been added to the appropriate bucket insertion sort is applied to all the buckets.  This step is the bottleneck for the algorithm.  If the data is not clustered tightly than the sorts can be completed in linear time despite the fact that insertion sort is O(n<sup>2</sup>). The algorithm degrades as certain buckets get more of the numbers, the worst case being when all the numbers are in a single bucket.  The data in the input array must uniformly distributed across the range of bucket values to avoid the polynomial time.  The size of each bucket should be equal to the number of buckets.  As bucket sort is polynomial in the worse case Quicksort is a more optimal sorting algorithm.
 
 
+## Gnome sort
+Gnome sort (dubbed Stupid sort) is a sorting algorithm originally proposed by an Iranian computer scientist Hamid Sarbazi-Azad (Professor of Computer Engineering at Sharif University of Technology) in 2000. The sort was first called "stupid sort" (not to be confused with bogosort), and then later on described by Dick Grune and named "gnome sort".
+
+The gnome sort is a sorting algorithm which is similar to insertion sort, except that moving an element to its proper place is accomplished by a series of swaps, similar to a bubble sort. It is conceptually simple, requiring no nested loops. The average, or expected, running time is O(n2) but tends towards O(n) if the list is initially almost sorted.
+
+The algorithm always finds the first place where two adjacent elements are in the wrong order and swaps them. It takes advantage of the fact that performing a swap can introduce a new out-of-order adjacent pair next to the previously swapped elements. It does not assume that elements forward of the current position are sorted, so it only needs to check the position directly previous to the swapped elements. 
+
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(n<sup>2</sup>)|O(n<sup>2</sup>)|Ω(n<sup>2</sup>)|
+
+|In-place?|Stable?|
+|---|---|
+|Yes|Yes|
+
+
 
 # Contribute
 1. Fork this repository
