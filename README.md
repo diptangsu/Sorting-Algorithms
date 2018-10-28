@@ -285,6 +285,15 @@ Time complexity analysis:
 
 
 
+### IN SHORT:
+Red and black is used for searching whereas for sorting it is better to use Heapsort(for local projects).The time complexity is for the worst case is "2nlogn" and best case is "n". But it is not stable, if you prefer the stable sort it is better to use the merge sort. O(n) = n log n. If the sorting is for priority of top 10 or least 10, then use priority Queue. (Max-PQ and Min-PQ).
+Source : (use this links for the code, it is an industrial code and the code is written in generics(can use any datatypes))
+Heap: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Heap.java.html
+Merge: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.html
+For other sorting and searching algorithms: https://algs4.cs.princeton.edu/code/
+
+
+
 # Contribute
 1. Fork this repository
 2. Clone it
