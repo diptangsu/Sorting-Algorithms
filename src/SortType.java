@@ -7,6 +7,9 @@ public enum SortType {
     QUICK,
     SELECTION,
     CYCLE,
-    SHELL
+    SHELL,
+    INTRO,
+    COMB,
+    GNOME
 }
 
