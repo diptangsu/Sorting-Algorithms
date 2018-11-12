@@ -1,60 +1,44 @@
-// Java implementation of ShellSort 
-public class ShellSort 
-{ 
-	/* An utility function to print array of size n*/
-	static void printArray(int arr[]) 
-	{ 
-		int n = arr.length; 
-		for (int i=0; i<n; ++i) 
-			System.out.print(arr[i] + " "); 
-		System.out.println(); 
-	} 
 
-	/* function to sort arr using shellSort */
-	int sort(int arr[]) 
-	{ 
-		int n = arr.length; 
+import java.util.Scanner;
 
-		// Start with a big gap, then reduce the gap 
-		for (int gap = n/2; gap > 0; gap /= 2) 
-		{ 
-			// Do a gapped insertion sort for this gap size. 
-			// The first gap elements a[0..gap-1] are already 
-			// in gapped order keep adding one more element 
-			// until the entire array is gap sorted 
-			for (int i = gap; i < n; i += 1) 
-			{ 
-				// add a[i] to the elements that have been gap 
-				// sorted save a[i] in temp and make a hole at 
-				// position i 
-				int temp = arr[i]; 
+public class ShellSort {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of elements : ");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("Enter " + n + " elements :");
+        for (int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
 
-				// shift earlier gap-sorted elements up until 
-				// the correct location for a[i] is found 
-				int j; 
-				for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) 
-					arr[j] = arr[j - gap]; 
+        shellSort(arr);
 
-				// put temp (the original a[i]) in its correct 
-				// location 
-				arr[j] = temp; 
-			} 
-		} 
-		return 0; 
-	} 
+        System.out.println("\nThe sorted array : ;");
+        for (int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
 
-	// Driver method 
-	public static void main(String args[]) 
-	{ 
-		int arr[] = {12, 34, 54, 2, 3}; 
-		System.out.println("Array before sorting"); 
-		printArray(arr); 
-
-		ShellSort ob = new ShellSort(); 
-		ob.sort(arr); 
-
-		System.out.println("Array after sorting"); 
-		printArray(arr); 
-	} 
-} 
-/*This code is contributed by Rajat Mishra */
+    static void shellSort(int[] nums) {
+        int h = 1;
+        int n = nums.length;
+        while(h < n) {
+                h = h * 3 + 1;
+        }
+        h = h / 3;
+        int c, j;
+        
+        while (h > 0) {
+            for (int i = h; i < n; i++) {
+                c = nums[i];
+                j = i;
+                while (j >= h && nums[j - h] > c) {
+                    nums[j] = nums[j - h];
+                    j = j - h;
+                }
+                nums[j] = c;
+            }
+            h = h / 2;
+        }
+    }
+}
