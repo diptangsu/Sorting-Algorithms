@@ -293,11 +293,5 @@ Merge: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.htm
 For other sorting and searching algorithms: https://algs4.cs.princeton.edu/code/
 
 
-
-# Contribute
-1. Fork this repository
-2. Clone it
-3. Create a new branch with an appropriate name
-4. Commit changes to that branch
-5. Push changes to your forked repository
-6. Create a pull request
+## Contributing
+To start contributing, check out [CONTRIBUTING.md](https://github.com/diptangsu/Sorting-Algorithms/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. Check out issues labelled as `Hacktoberfest` if you are up for some grabs! :)
