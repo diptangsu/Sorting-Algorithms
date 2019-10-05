@@ -1,5 +1,5 @@
-/** autor: Edimar Chaves Jr.
- * 02/10/2019 13:40:33
+/**
+ *
  *
  * @param <T> T is a generic comparable type (Integer for exemple)
  *
