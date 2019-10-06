@@ -1,9 +1,8 @@
-# include <stdio.h>
+#include <stdio.h>
 
-
-void bubblesort(int a[], int size){
-    for (int i = 1; i < size; i++){
-        for (int j = 0; j < i; j++){
+void bubblesort(int a[], int size) {
+    for (int i = 1; i < size; i++) {
+        for (int j = 0; j < i; j++) {
             if (a[j] > a[j+1]){
                 int tmp = a[j+1];
                 a[j+1] = a[j];
