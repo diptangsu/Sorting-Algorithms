@@ -1,4 +1,4 @@
-dea/**/workspace.xml
+.idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
@@ -66,6 +66,14 @@ fabric.properties
 # See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
 
 .idea/
+
+
+### VSCODE config ###
+.vscode
+
+### Python virtual env ###
+env
+venv
 
 # Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
 
