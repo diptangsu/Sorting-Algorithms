@@ -6,7 +6,7 @@ import random
 def bogoSort(a):
     n = len(a)
     while (is_sorted(a) is False):
-        shuffle(a)
+         random.shuffle(a)
 
 
 # To check if array is sorted or not
