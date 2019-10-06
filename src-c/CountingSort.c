@@ -1,14 +1,19 @@
-#include <stdio.h>
+# include <stdio.h>
+# include <stdlib.h>
 
-void bubblesort(int a[], int size) {
-    for (int i = 1; i < size; i++) {
-        for (int j = 0; j < i; j++) {
-            if (a[j] > a[j+1]){
-                int tmp = a[j+1];
-                a[j+1] = a[j];
-                a[j] = tmp;
-            }
-        }
+void countingsort(int a[], int size){
+    int max = 0;
+    for (int i = 0; i < size; i++){
+        if (max < a[i]) max = a[i];
+    }
+    int* count =  (int *)calloc(max, sizeof(int));  
+    for (int i = 1; i < size; i++){
+        count[ a[i]] ++;
+    }
+    printf("\nSorted list:\n"); // Display the sorted array  
+    for (int i = 0; i <= max; i++){
+        for (int j = 0; j < count[i]; j++)
+            printf("%d ", i);
     }
 }
 
@@ -29,11 +34,6 @@ int main ()
     {  
          printf("%d ", a[i]);  
     }  
-    bubblesort(a, n);  
-    printf("\nSorted list:\n"); // Display the sorted array  
-    for(i = 0;i < n;i++)  
-    {  
-        printf("%d ", (a[i]));  
-    }  
+    countingsort(a, n);  
     return 0;  
 }
