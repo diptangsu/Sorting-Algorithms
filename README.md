@@ -7,7 +7,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|O(n<sup>2</sup>)|Ω(n)|
+|O(n<sup>2</sup>)|Θ(n<sup>2</sup>)|Ω(n)|
 
 |In-place?|Stable?|
 |---|---|
@@ -23,7 +23,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|O(n<sup>2</sup>)|Ω(n<sup>2</sup>)|
+|O(n<sup>2</sup>)|Θ(n<sup>2</sup>)|Ω(n<sup>2</sup>)|
 
 |In-place?|Stable?|
 |---|---|
@@ -38,7 +38,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|O(n<sup>2</sup>)|Ω(n)|
+|O(n<sup>2</sup>)|Θ(n<sup>2</sup>)|Ω(n)|
 
 |In-place?|Stable?|
 |---|---|
@@ -82,7 +82,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n log(n))|O(n log(n))|Ω(n) (bottom up)|
+|O(n log(n))|Θ(n log(n))|Ω(n) (bottom up)|
 
 |In-place?|Stable?|
 |---|---|
@@ -100,7 +100,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n log(n))|O(n log(n))|Ω(n log(n))|
+|O(n log(n))|Θ(n log(n))|Ω(n log(n))|
 
 |In-place?|Stable?|
 |---|---|
@@ -116,7 +116,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|O(n log(n))|Ω(n log(n))|
+|O(n<sup>2</sup>)|Θ(n log(n))|Ω(n log(n))|
 
 |In-place?|Stable?|
 |---|---|
@@ -130,7 +130,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|O(nk)|Ω(nk)|
+|O(nk)|Θ(nk)|Ω(nk)|
 
 |In-place?|Stable?|
 |---|---|
