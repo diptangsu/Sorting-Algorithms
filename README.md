@@ -52,7 +52,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n+k)|O(n+k>)|Ω(n+k)|
+|O(n+k)|Θ(n+k>)|Ω(n+k)|
 
 |In-place?|Stable?|
 |---|---|
@@ -66,7 +66,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|O(n<sup>2</sup>)|Ω(n<sup>2</sup>)|
+|O(n<sup>2</sup>)|Θ(n<sup>2</sup>)|Ω(n<sup>2</sup>)|
 
 |In-place?|Stable?|
 |---|---|
@@ -144,7 +144,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|O(n<sup>2</sup>)|Ω(n)|
+|O(n<sup>2</sup>)|Θ(n<sup>2</sup>)|Ω(n)|
 
 |In-place?|Stable?|
 |---|---|
@@ -186,7 +186,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n log(n))|O(n log(n))|O(n log(n))|
+|O(n log(n))|Θ(n log(n))|O(n log(n))|
 
 |In-place?|Stable?|
 |---|---|
@@ -201,7 +201,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|θ(n+k)|Ω(n+k)|
+|O(n<sup>2</sup>)|Θ(n+k)|Ω(n+k)|
 
 |In-place?|Stable?|
 |---|---|
@@ -240,7 +240,7 @@ Time complexity analysis:
 
 |Worst Case|Average Case|Best Case|
 |---|---|---|
-|O(n<sup>2</sup>)|Ω(n<sup>2</sup>/2<sup>p</sup>),where p is the number of increments|θ(n log(n))|
+|O(n<sup>2</sup>)|Θ(n<sup>2</sup>/2<sup>p</sup>),where p is the number of increments|Ω(n log(n))|
 
 |In-place?|Stable?|
 |---|---|
