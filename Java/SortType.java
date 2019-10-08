@@ -1,6 +1,7 @@
 
 public enum SortType {
     BUBBLE,
+    BITONIC,
     HEAP,
     INSERTION,
     MERGE,

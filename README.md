@@ -286,5 +286,19 @@ Merge: https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.htm
 For other sorting and searching algorithms: https://algs4.cs.princeton.edu/code/
 
 
+## Bitonic Sort
+The Bitonic Sort is a parallel comparison-based sorting algorithm which does O(nlogn) comparisons. It is also called as the Bitonic Merge Sort. The Bitonic Sort is based on the concept of converting the given sequence into a Bitonic Sequence. A Bitonic Sequence is a sequence of numbers which is first strictly increasing then after a point strictly decreasing. Although, the number of comparisons are more than that in any other popular sorting algorithm, It performs better for the parallel implementation because elements are compared in predefined sequence which must not be depended upon the data being sorted. The predefined sequence is called Bitonic sequence. Therefore it is suitable for implementation in hardware and parallel processor array.  
+
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(log<sup>2</sup>n)|O(log<sup>2</sup>n)|O(log<sup>2</sup>n)|
+
+|In-place?|Stable?|
+|---|---|
+|Yes|No|
+
+
 ## Contributing
 To start contributing, check out [CONTRIBUTING.md](https://github.com/diptangsu/Sorting-Algorithms/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. Check out issues labelled as `Hacktoberfest` if you are up for some grabs! :)
