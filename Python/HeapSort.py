@@ -29,7 +29,7 @@ def heapify(arr, n, i):
 # The main function to sort an array of given size
 
 
-def heapSort(arr):
+def heap_sort(arr):
     n = len(arr)
 
     # Build a maxheap.
@@ -37,15 +37,12 @@ def heapSort(arr):
         heapify(arr, n, i)
 
     # One by one extract elements
-    for i in range(n-1, 0, -1):
+    for i in range(n - 1, 0, -1):
         arr[i], arr[0] = arr[0], arr[i]  # swap
         heapify(arr, i, 0)
 
 
 # Driver code to test above
 arr = [12, 11, 13, 5, 6, 7]
-heapSort(arr)
-n = len(arr)
-print("Sorted array is")
-for i in range(n):
-    print("%d" % arr[i]),
+heap_sort(arr)
+print("Sorted array:", arr)

@@ -1,8 +1,5 @@
 # Python program to implement Pigeonhole Sort */
 
-# source code : "https://en.wikibooks.org/wiki/
-#   Algorithm_Implementation/Sorting/Pigeonhole_sort"
-
 
 def pigeonhole_sort(a):
     # size of range of values in the list
@@ -29,9 +26,6 @@ def pigeonhole_sort(a):
 
 
 a = [8, 3, 2, 7, 4, 6, 8]
-print("Sorted order is : ", end=' ')
 
 pigeonhole_sort(a)
-
-for i in range(0, len(a)):
-    print(a[i], end=' ')
+print('Sorted array:', a)
