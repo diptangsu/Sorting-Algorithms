@@ -20,4 +20,4 @@ def gnome_sort(arr):
 arr = [34, 2, 10, -9]
 
 arr = gnome_sort(arr)
-print("Sorted seqquence after applying Gnome Sort :", arr)
+print("Sorted sequence after applying Gnome Sort :", arr)
