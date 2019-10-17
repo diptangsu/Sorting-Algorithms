@@ -1,7 +1,7 @@
 # Python program to implement cycle sort
 
 
-def cycleSort(array):
+def cycle_sort(array):
     writes = 0
 
     # Loop through the array to find cycles to rotate.
@@ -45,8 +45,6 @@ def cycleSort(array):
 # driver code
 arr = [1, 8, 3, 9, 10, 10, 2, 4]
 n = len(arr)
-cycleSort(arr)
+cycle_sort(arr)
 
-print("After sort : ")
-for i in range(0, n):
-    print(arr[i], end=' ')
+print("After sort : ", arr)
