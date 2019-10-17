@@ -2,7 +2,7 @@
 
 
 # using bucket sort
-def insertionSort(b):
+def insertion_sort(b):
     for i in range(1, len(b)):
         up = b[i]
         j = i - 1
@@ -13,7 +13,7 @@ def insertionSort(b):
     return b
 
 
-def bucketSort(x):
+def bucket_sort(x):
     arr = []
     slot_num = 10  # 10 means 10 slots, each
     # slot's size is 0.1
@@ -27,7 +27,7 @@ def bucketSort(x):
 
     # Sort individual buckets
     for i in range(slot_num):
-        arr[i] = insertionSort(arr[i])
+        arr[i] = insertion_sort(arr[i])
 
     # concatenate the result
     k = 0
@@ -41,4 +41,4 @@ def bucketSort(x):
 # Driver Code
 x = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
 print("Sorted Array is")
-print(bucketSort(x))
+print(bucket_sort(x))
