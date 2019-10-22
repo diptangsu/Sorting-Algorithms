@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class coba {
+public class QuickSort {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.println("QUICK SORTING");
