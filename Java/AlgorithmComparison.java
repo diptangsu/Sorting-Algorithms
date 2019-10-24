@@ -85,6 +85,7 @@ public class AlgorithmComparison {
                 break;
             case INTRO:
             	IntroSort.introSort(arr2, 0, arr2.length - 1, IntroSort.calcDepth(arr2));
+                break;
             case GNOME:
                 GnomeSort.gnomeSort(arr2);
                 break;
