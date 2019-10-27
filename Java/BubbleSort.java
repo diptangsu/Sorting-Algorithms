@@ -1,39 +1,54 @@
 import java.util.Scanner;
 
 public class BubbleSort {
-
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of elements : ");
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-        System.out.println("Enter " + n + " elements :");
-        for (int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
-
-        bubbleSort(arr);
-
-        System.out.println("\nThe sorted array : ;");
-        for (int i = 0; i < n; i++)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
-
-    static void bubbleSort(int arr[]) {
-        int len = arr.length, tmp;
-        boolean flag;
-        for (int i = 0; i < len; i++) {
-            flag = false;
-            for (int j = 0; j < len - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    tmp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = tmp;
-                    flag = true;
-                }
-            }
-            if (!flag)
-                break;
-        }
-    }
-}
+	 
+	public static void main(String[] args)
+	{  
+		int arr[] ={860,8,200,9};  
+ 
+		System.out.println("---Array BEFORE Bubble Sort---"); 
+		
+	    printArray(arr);
+ 
+		bubbleSort(arr);//sorting array elements using bubble sort  
+ 
+		System.out.println("---Array AFTER Bubble Sort---");  
+		
+		printArray(arr); 
+ 
+	}  
+ 	static void bubbleSort(int[] array)
+	{  
+		int n = array.length;  
+		int temp = 0;  
+		for(int i=0; i < n; i++) // Looping through the array length
+		{  System.out.println("Sort Pass Number "+(i+1)); 
+			for(int j=1; j < (n-i); j++)
+			{  
+			    System.out.println("Comparing "+ array[j-1]+ " and " + array[j]);    
+				if(array[j-1] > array[j])
+				{   
+				    
+					//swap elements  
+					temp = array[j-1];  
+					array[j-1] = array[j];  
+					array[j] = temp;  
+				    System.out.println(array[j]  + " is greater than " + array[j-1]);
+				    System.out.println("Swapping Elements: New Array After Swap");
+					printArray(array);
+				}  
+ 
+			}  
+		}  
+ 
+	} 
+	
+	static void printArray(int[] array){
+	    
+	    for(int i=0; i < array.length; i++)
+		{  
+			System.out.print(array[i] + " ");  
+		} 
+	    System.out.println();
+	    
+	}
