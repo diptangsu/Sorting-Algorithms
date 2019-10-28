@@ -165,6 +165,22 @@ Time complexity analysis:
 |Yes|No|
 
 
+
+## Bozo Sort
+Bozosort is somewhat similar to Bogosort in its random behaviour. It works by choosing two random elements of the list and swapping them, until the list is actually sorted.
+The running time analysis of a bozosort is difficult, but some estimates are found in H. O(n!) is found to be the expected average case. Considering that every iteration calls a function that checks if the list is ordered or not, that makes the average case actually O((n+1)!)
+
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|Unbounded|O((n+1)!) (estimated)|Ω(n)|
+
+|In-place?|Stable?|
+|---|---|
+|Yes|No|
+
+
 ## Shell Sort
 Shellsort, also known as Shell sort or Shell's method, is an in-place comparison sort. It can be seen as either a generalization of sorting by exchange (bubble sort) or sorting by insertion (insertion sort).The method starts by sorting pairs of elements far apart from each other, then progressively reducing the gap between elements to be compared. Starting with far apart elements, it can move some out-of-place elements into position faster than a simple nearest neighbor exchange. Donald Shell published the first version of this sort in 1959.The running time of Shellsort is heavily dependent on the gap sequence it uses. For many practical variants, determining their time complexity remains an open problem.
 
@@ -298,6 +314,21 @@ Time complexity analysis:
 |In-place?|Stable?|
 |---|---|
 |Yes|No|
+
+
+## Pancake Sort
+Pancake sorting is the colloquial term for the mathematical problem of sorting a disordered stack of pancakes in order of size when a spatula can be inserted at any point in the stack and used to flip all pancakes above it. A pancake number is the minimum number of flips required for a given number of pancakes.
+Unlike a traditional sorting algorithm, which attempts to sort with the fewest comparisons possible, the goal is to sort the sequence in as few reversals as possible. 
+
+Time complexity analysis:
+
+|Worst Case|Average Case|Best Case|
+|---|---|---|
+|O(n^2)|O(n)|O(n)|
+
+|In-place?|Stable?|
+|---|---|
+|No|No|
 
 
 ## Contributing
