@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include<conio.h>             //Added library for clear screen
 void bubblesort(int a[], int size) {
     for (int i = 1; i < size; i++) {
         for (int j = 0; j < i; j++) {
@@ -14,26 +14,27 @@ void bubblesort(int a[], int size) {
 
 int main ()  
 {  
-    int n, i;  
+    int num,ctr;               //changed variable
     int *a;  
+    clrscr();                 //Clear screen added 
     printf("Please insert the number of elements to be sorted: ");  
-    scanf("%d", &n);       // The total number of elements  
-    a  =  (int *)calloc(n, sizeof(int));  
-    for (i = 0;i< n;i++)  
+    scanf("%d", &num);       // The total number of elements  
+    a  =  (int *)calloc(num, sizeof(int));  
+    for (ctr = 0;ctr<num;ctr++)  
     {  
-        printf("Input element %d :", i);  
-        scanf("%d", &a[i]); // Adding the elements to the array  
+        printf("Input element %d :", ctr);  
+        scanf("%d", &a[ctr]); // Adding the elements to the array  
     }  
     printf("unsorted list: ");       // Displaying the unsorted array  
-    for(i = 0;i < n;i++)  
+    for(ctr= 0;ctr<num;ctr++)  
     {  
-         printf("%d ", a[i]);  
+         printf("%d ", a[ctr]);  
     }  
-    bubblesort(a, n);  
-    printf("\nSorted list:\n"); // Display the sorted array  
-    for(i = 0;i < n;i++)  
+    bubblesort(a, num);  
+    printf("\nAfter sorting:\n"); //Changed the comment which show the display
+    for(ctr= 0;ctr<num;ctr++)  
     {  
-        printf("%d ", (a[i]));  
+        printf("%d ", (a[ctr]));  
     }  
     return 0;  
 }
