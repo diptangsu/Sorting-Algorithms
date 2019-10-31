@@ -1,14 +1,18 @@
 #include <stdio.h>
 
 void bubblesort(int a[], int size) {
-    for (int i = 1; i < size; i++) {
-        for (int j = 0; j < i; j++) {
+    for (int i = 0; i < size-1; i++) {
+	int swapped=0;
+        for (int j = 0; j < n-i-1; j++) {
             if (a[j] > a[j+1]){
                 int tmp = a[j+1];
                 a[j+1] = a[j];
                 a[j] = tmp;
+		swapped=1;
             }
         }
+	if(swapped==0)
+	    break;
     }
 }
 
