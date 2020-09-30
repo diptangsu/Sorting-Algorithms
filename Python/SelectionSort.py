@@ -2,7 +2,8 @@
 from typing import List, TypeVar
 
 # Declare generic type for the sort function input
-T = TypeVar('T')
+T = TypeVar("T")
+
 
 # Function to do selection sort
 def selection_sort(arr: List[T]) -> None:
@@ -18,6 +19,7 @@ def selection_sort(arr: List[T]) -> None:
         # Swap the found minimum element with
         # the first element
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
+
 
 # Driver code to test above
 if __name__ == "__main__":
