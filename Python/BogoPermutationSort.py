@@ -27,8 +27,9 @@ def shuffle(a):
 
 
 # Driver code to test above
-a = [3, 2, 4, 1, 0, 5]
-bogo_sort(a)
-print("Sorted array :")
-for i in range(len(a)):
-    print("%d" % a[i])
+if __name__ == '__main__':
+    a = [3, 2, 4, 1, 0, 5]
+    bogo_sort(a)
+    print("Sorted array :")
+    for i in range(len(a)):
+        print("%d" % a[i])

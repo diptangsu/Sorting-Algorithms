@@ -25,7 +25,8 @@ def pigeonhole_sort(a):
             i += 1
 
 
-a = [8, 3, 2, 7, 4, 6, 8]
+if __name__ == '__main__':
+    a = [8, 3, 2, 7, 4, 6, 8]
 
-pigeonhole_sort(a)
-print('Sorted array:', a)
+    pigeonhole_sort(a)
+    print('Sorted array:', a)

@@ -43,8 +43,9 @@ def cycle_sort(array):
 
 
 # driver code
-arr = [1, 8, 3, 9, 10, 10, 2, 4]
-n = len(arr)
-cycle_sort(arr)
+if __name__ == '__main__':
+    arr = [1, 8, 3, 9, 10, 10, 2, 4]
+    n = len(arr)
+    cycle_sort(arr)
 
-print("After sort : ", arr)
+    print("After sort : ", arr)

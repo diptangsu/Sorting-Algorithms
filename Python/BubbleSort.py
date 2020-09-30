@@ -25,10 +25,12 @@ def bubble_sort(arr):
         if swapped is False:
             break
 
+
 # Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 90]
+if __name__ == '__main__':
+    arr = [64, 34, 25, 12, 22, 11, 90]
 
-print('Array:', arr)
+    print('Array:', arr)
 
-bubble_sort(arr)
-print('Sorted array:', arr)
+    bubble_sort(arr)
+    print('Sorted array:', arr)

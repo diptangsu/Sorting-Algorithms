@@ -39,6 +39,7 @@ def bucket_sort(x):
 
 
 # Driver Code
-x = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
-print("Sorted Array is")
-print(bucket_sort(x))
+if __name__ == '__main__':
+    x = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
+    print("Sorted Array is")
+    print(bucket_sort(x))

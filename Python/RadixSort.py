@@ -2,6 +2,8 @@
 
 # A function to do counting sort of arr[] according to
 # the digit represented by exp.
+
+
 def counting_sort(arr, exp1):
     n = len(arr)
 
@@ -51,6 +53,7 @@ def radix_sort(arr):
 
 
 # Driver code to test above
-arr = [170, 45, 75, 90, 802, 24, 2, 66]
-radix_sort(arr)
-print(arr)
+if __name__ == '__main__':
+    arr = [170, 45, 75, 90, 802, 24, 2, 66]
+    radix_sort(arr)
+    print(arr)

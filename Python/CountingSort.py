@@ -38,6 +38,7 @@ def count_sort(arr):
 
 
 # Driver program to test above function
-arr = "mynameisdiptangsugoswami"
-ans = count_sort(arr)
-print(f'Sorted character array is: {"".join(ans)}')
+if __name__ == '__main__':
+    arr = "mynameisdiptangsugoswami"
+    ans = count_sort(arr)
+    print(f'Sorted character array is: {"".join(ans)}')
