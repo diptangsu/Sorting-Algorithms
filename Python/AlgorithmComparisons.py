@@ -16,8 +16,8 @@ random_numbers_reverse_sorted = sorted(random_numbers, reverse=True)
 
 
 def print_comparison(comparison):
-    largest_name_len = len(max(comparison.keys()))
-    largest_name_len += 20
+    largest_name_len = len(max(comparison.keys(), key=len))
+    largest_name_len += 6
 
     heading = 'ALGORITHM'.ljust(largest_name_len) + 'TIME TAKEN'
     print(heading)
