@@ -5,30 +5,39 @@ int main(){
     * store the input numbers in array. You can increase
     * or decrease the size of number array as per requirement
     */
-   int i, j, count, temp, number[25];
+   int a[10000], i, j, p, tmp, n; //Initializing variables
 
-   printf("Enter number of elements ");
-   scanf("%d",&count);
+    printf("Enter no. of elements in array:\n");
+    scanf("%d", &n);
 
-   printf("Enter %d elements: ", count);
-   // Loop to get the elements stored in array
-   for(i=0;i<count;i++)
-      scanf("%d",&number[i]);
+    printf("Enter elements of array:\n");
+    //Loop to input elements of array
+    for(int k =0; k<n; k++){
+        scanf("%d", &a[i]);
+    }
  
-   // Logic of selection sort algorithm
-   for(i=0;i<count;i++){
-      for(j=i+1;j<count;j++){
-         if(number[i]>number[j]){
-            temp=number[i];
-            number[i]=number[j];
-            number[j]=temp;
-         }
-      }
-   }
+   //The given loops used to compare each element with all others and swap
+    for(j=0;j<n;j++){
+        p=j;
+        for(i=j;i<n;i++){
+            if(a[p]>a[i]){
+                tmp=a[p];
+                a[p]=a[i];
+                a[i]=tmp;
+            }
+        }
+    }
 
-   printf("Sorted elements: ");
-   for(i=0;i<count;i++)
-      printf(" %d",number[i]);
-
-   return 0;
+   //Array in sorted ascending order 
+    printf("Array in ascending order:\n");
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    printf("\nArray in descending order:\n")
+    for(i=n-1; i>=0; i--){
+        printf("%d ", a[i]);
+    }
+    return 0;
 }
+
+//This code is contributed by Akhil
