@@ -1,8 +1,7 @@
-# Python3 Optimized implementation
-# of Bubble sort
+"""Python3 Optimized implementation of Bubble sort
+"""
 
 
-# An optimized version of Bubble Sort
 def bubble_sort(arr):
     n = len(arr)
 
@@ -22,13 +21,15 @@ def bubble_sort(arr):
 
         # IF no two elements were swapped
         # by inner loop, then break
-        if swapped is False:
+        if not swapped:
             break
 
+
 # Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 90]
+if __name__ == '__main__':
+    arr = [64, 34, 25, 12, 22, 11, 90]
 
-print('Array:', arr)
+    print('Array:', arr)
 
-bubble_sort(arr)
-print('Sorted array:', arr)
+    bubble_sort(arr)
+    print('Sorted array:', arr)

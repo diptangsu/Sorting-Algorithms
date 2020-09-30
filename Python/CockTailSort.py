@@ -46,6 +46,7 @@ def cocktail_sort(a):
 
 
 # Driver code to test above
-a = [5, 1, 4, 2, 8, 0, 2]
-cocktail_sort(a)
-print('Sorted array is:', a)
+if __name__ == '__main__':
+    a = [5, 1, 4, 2, 8, 0, 2]
+    cocktail_sort(a)
+    print('Sorted array is:', a)

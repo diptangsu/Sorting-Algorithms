@@ -39,7 +39,8 @@ def quick_sort(arr, low, high):
 
 
 # Driver code to test above
-arr = [10, 7, 8, 9, 1, 5]
-n = len(arr)
-quick_sort(arr, 0, n - 1)
-print("Sorted array is:", arr)
+if __name__ == '__main__':
+    arr = [10, 7, 8, 9, 1, 5]
+    n = len(arr)
+    quick_sort(arr, 0, n - 1)
+    print("Sorted array is:", arr)

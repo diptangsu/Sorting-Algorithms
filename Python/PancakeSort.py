@@ -3,6 +3,8 @@
 # pancake sort
 
 # Reverses arr[0..i]
+
+
 def flip(arr, i):
     start = 0
     while start < i:
@@ -14,6 +16,8 @@ def flip(arr, i):
 
 # Returns index of the maximum
 # element in arr[0..n-1]
+
+
 def find_max(arr, n):
     mi = 0
     for i in range(0, n):
@@ -24,6 +28,8 @@ def find_max(arr, n):
 # The main function that
 # sorts given array
 # using flip operations
+
+
 def pancake_sort(arr):
     n = len(arr)
     # Start from the complete
@@ -55,7 +61,8 @@ def pancake_sort(arr):
 
 
 # Driver program
-arr = [23, 10, 20, 11, 12, 6, 7]
-pancake_sort(arr)
+if __name__ == '__main__':
+    arr = [23, 10, 20, 11, 12, 6, 7]
+    pancake_sort(arr)
 
-print('Sorted Array:', arr)
+    print('Sorted Array:', arr)

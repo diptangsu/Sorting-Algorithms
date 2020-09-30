@@ -43,6 +43,7 @@ def heap_sort(arr):
 
 
 # Driver code to test above
-arr = [12, 11, 13, 5, 6, 7]
-heap_sort(arr)
-print("Sorted array:", arr)
+if __name__ == '__main__':
+    arr = [12, 11, 13, 5, 6, 7]
+    heap_sort(arr)
+    print("Sorted array:", arr)

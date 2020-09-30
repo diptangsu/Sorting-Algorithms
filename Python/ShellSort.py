@@ -29,8 +29,9 @@ def shell_sort(arr):
 
 
 # Driver code to test above
-arr = [12, 34, 54, 2, 3]
-print("Array before sorting:", arr)
+if __name__ == '__main__':
+    arr = [12, 34, 54, 2, 3]
+    print("Array before sorting:", arr)
 
-shell_sort(arr)
-print("Array after sorting:", arr)
+    shell_sort(arr)
+    print("Array after sorting:", arr)

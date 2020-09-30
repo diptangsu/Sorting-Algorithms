@@ -26,10 +26,10 @@ def stoogesort(arr, l, h):
         stoogesort(arr, l, (h - t))
 
 
-# deriver
-arr = [2, 4, 5, 3, 1]
-n = len(arr)
+if __name__ == '__main__':
+    arr = [2, 4, 5, 3, 1]
+    n = len(arr)
 
-stoogesort(arr, 0, n - 1)
+    stoogesort(arr, 0, n - 1)
 
-print(arr)
+    print(arr)

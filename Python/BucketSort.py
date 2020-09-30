@@ -1,19 +1,19 @@
-# Python3 program to sort an array
+"""Python3 program to sort an array
+"""
 
 
-# using bucket sort
-def insertion_sort(b):
-    for i in range(1, len(b)):
-        up = b[i]
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        up = arr[i]
         j = i - 1
-        while j >= 0 and b[j] > up:
-            b[j + 1] = b[j]
+        while j >= 0 and arr[j] > up:
+            arr[j + 1] = arr[j]
             j -= 1
-        b[j + 1] = up
-    return b
+        arr[j + 1] = up
+    return arr
 
 
-def bucket_sort(x):
+def bucket_sort(numbers):
     arr = []
     slot_num = 10  # 10 means 10 slots, each
     # slot's size is 0.1
@@ -21,7 +21,7 @@ def bucket_sort(x):
         arr.append([])
 
     # Put array elements in different buckets
-    for j in x:
+    for j in numbers:
         index_b = int(slot_num * j)
         arr[index_b].append(j)
 
@@ -33,12 +33,13 @@ def bucket_sort(x):
     k = 0
     for i in range(slot_num):
         for j in range(len(arr[i])):
-            x[k] = arr[i][j]
+            numbers[k] = arr[i][j]
             k += 1
-    return x
+    return numbers
 
 
 # Driver Code
-x = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
-print("Sorted Array is")
-print(bucket_sort(x))
+if __name__ == '__main__':
+    numbers = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
+    print("Sorted Array is")
+    print(bucket_sort(numbers))

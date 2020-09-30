@@ -41,10 +41,11 @@ def sort(a, n, up):
 
 
 # Driver code to test above
-a = [3, 7, 4, 8, 6, 2, 1, 5]
-n = len(a)
-up = 1
+if __name__ == '__main__':
+    a = [3, 7, 4, 8, 6, 2, 1, 5]
+    n = len(a)
+    up = 1
 
-print('Array:', a)
-sort(a, n, up)
-print('Sorted array:', a)
+    print('Array:', a)
+    sort(a, n, up)
+    print('Sorted array:', a)
