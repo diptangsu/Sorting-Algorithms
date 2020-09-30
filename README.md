@@ -334,7 +334,7 @@ Time complexity analysis:
 
 ## Stooge Sort
 
-The Stooge sort is a recursive sorting algorithm. It is defined for ascending order sorting.
+The Stooge sort is a recursive sorting algorithm. It is defined for ascending order sorting.Stooge sort is a recursive sorting algorithm. It is notable for its exceptionally bad time complexity of O(n^(log 3 / log 1.5 ) = O(n2.7095...). The running time of the algorithm is thus slower compared to reasonable sorting algorithms, and is slower than Bubble sort, a canonical example of a fairly inefficient sort. It is however more efficient than Slowsort
 
 ## 3 Way Merge Sort
 Merge sort involves recursively splitting the array into 2 parts, sorting and finally merging them. A variant of merge sort is called 3-way merge sort where instead of splitting the array into 2 parts we split it into 3 parts.
