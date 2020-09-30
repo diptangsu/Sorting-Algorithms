@@ -51,17 +51,17 @@ def merge(arr, left, middle, right):
 # sub-array of arr to be sorted
 
 
-def mergeSort(arr, l, r):
-    if l < r:
+def mergeSort(arr, left, right):
+    if left < right:
 
         # Same as (l+r)//2, but avoids overflow for
         # large l and h
-        m = (l+(r-1))//2
+        m = (left+(right-1))//2
 
         # Sort first and second halves
-        mergeSort(arr, l, m)
-        mergeSort(arr, m+1, r)
-        merge(arr, l, m, r)
+        mergeSort(arr, left, m)
+        mergeSort(arr, m+1, right)
+        merge(arr, left, m, right)
 
 
 # Driver code to test above
