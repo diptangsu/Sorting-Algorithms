@@ -17,6 +17,7 @@ def selectnsort(a):
     return a
 
 if __name__ == "__main__":
+    
     print("Enter the number of elements:")
     n = int(input())
     print("Enter the elements of array:")
@@ -27,4 +28,4 @@ if __name__ == "__main__":
     # Driver code to test above
     print("Sorted array:", selectnsort(a))
 
-    #This code is contributed by Akhil
+    # This code is contributed by Akhil
