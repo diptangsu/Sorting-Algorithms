@@ -11,7 +11,9 @@ int main(){
    printf("Enter %d elements: ", count);
    // This loop would store the input numbers in an array
    for(i=0;i<count;i++)
-      scanf("%d",&number[i]);
+   {  printf("Enter element no. %d: ", i+1);
+     scanf("%d",&number[i]);
+   }
 
    // Implementation of insertion sort algorithm
    for(i=1;i<count;i++){
