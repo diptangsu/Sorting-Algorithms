@@ -49,31 +49,3 @@ void cycleSort(int arr[], int n)
 		} 
 	} 
 } 
-
-void printArray(int arr[], int n){
-	for (int i = 0; i < n; i++) 
-		cout << arr[i] << " "; 
-
-	cout << endl;
-}
-
-int main() 
-{ 
-	int n = 6;
-	int maxElement = 100;
-	int arr[n]; 
-
-	for(int i = 0; i < n; i++) {
-		arr[i] = rand() % maxElement;
-	}
-
-	cout << "Before sort: " << endl;
-	printArray(arr, n);
-
-	cycleSort(arr, n); 
-
-	cout << "After sort : " << endl; 
-	printArray(arr, n);
-
-	return 0; 
-} 

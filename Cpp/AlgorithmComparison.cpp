@@ -35,6 +35,10 @@ void printSortingTime(SortType sortType, int arr[]){
 			countSort(arrCopy, SIZE);
 			algorithmUsed = "COUNT_SORT";
 			break;
+		case CYCLE:
+			countSort(arrCopy, SIZE);
+			algorithmUsed = "CYCLE_SORT";
+			break;
 		case HEAP:
 			heapSort(arrCopy, SIZE);
 			algorithmUsed = "HEAP_SORT";
@@ -66,6 +70,7 @@ void printSortingTime(SortType sortType, int arr[]){
 void compareSortingAlgorithms(int arr[]){
 	printSortingTime(SortType::BUBBLE, arr);
 	printSortingTime(SortType::COUNT, arr);
+	printSortingTime(SortType::CYCLE, arr);
     printSortingTime(SortType::HEAP, arr);
     printSortingTime(SortType::INSERTION, arr);
     printSortingTime(SortType::MERGE, arr);
