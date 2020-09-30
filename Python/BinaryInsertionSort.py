@@ -2,7 +2,7 @@
 
 
 def binary_search(arr, val, start, end):
-    # we need to distinugish whether we should insert
+    # we need to distinguish whether we should insert
     # before or after the left boundary.
     # imagine [0] is the last step of the binary search
     # and we need to decide where to insert -1
