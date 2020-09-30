@@ -1,5 +1,5 @@
-﻿# Sorting-Algorithms
-Sorting means to arrange a following set of numbers in ASCENDING or DESCENDING order,and we need certain algorithms in programming language to implement those.
+# Sorting-Algorithms
+Sorting means to arrange a following set of numbers in ASCENDING/INCREASING/NON DECREASING or DESCENDING/DECREASING/NON INCREASING order, and we need certain algorithms in programming to implement the same.
 
 # Various Sorting Algorithms are as follows: 
 ## Bubble Sort
