@@ -1,8 +1,7 @@
-# Python3 Optimized implementation
-# of Bubble sort
+"""Python3 Optimized implementation of Bubble sort
+"""
 
 
-# An optimized version of Bubble Sort
 def bubble_sort(arr):
     n = len(arr)
 
@@ -22,7 +21,7 @@ def bubble_sort(arr):
 
         # IF no two elements were swapped
         # by inner loop, then break
-        if swapped is False:
+        if not swapped:
             break
 
 
