@@ -35,8 +35,9 @@ def insertion_sort(arr):
     return arr
 
 
-arr = [37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]
-print(f'List: {arr}')
-print('Sorting...')
-sorted_arr = insertion_sort(arr)
-print(f'List: {sorted_arr}')
+if __name__ == '__main__':
+    arr = [37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]
+    print(f'List: {arr}')
+    print('Sorting...')
+    sorted_arr = insertion_sort(arr)
+    print(f'List: {sorted_arr}')
