@@ -1,4 +1,5 @@
-# Python Program implementation of binary insertion sort
+"""Python Program implementation of binary insertion sort
+"""
 
 
 def binary_search(arr, val, start, end):
