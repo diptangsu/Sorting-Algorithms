@@ -1,5 +1,6 @@
-public class CycleSort {
+public classCycleSort {
     // Main function to test the Cycle sort function
+    //It is mandatary to do this
     public static void main(String[] args) {
         int arr[] = {1, 8, 3, 9, 10, 10, 2, 4};
         int n = arr.length;
@@ -11,7 +12,7 @@ public class CycleSort {
         }
     }
 
-    // Function sort the array using Cycle sort
+    // Function to sort the array using the Cycle sort
     public static void cycleSort(int arr[], int n) {
         int w = 0; // count number of memory writes
 
@@ -29,7 +30,7 @@ public class CycleSort {
             while (item == arr[pos]) // ignore all duplicate elements
                 pos += 1;
 
-            if (pos != start) { // put the item to it's right position
+            if (pos != start) { // put the item to its right position
                 int temp = item;
                 item = arr[pos];
                 arr[pos] = temp;
