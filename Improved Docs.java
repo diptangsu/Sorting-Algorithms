@@ -1,4 +1,6 @@
+//Bubble sort program in Java
 import java.util.Scanner;
+//importing the scanner 
 
 public class BubbleSort {
 
@@ -35,5 +37,6 @@ public class BubbleSort {
             if (!flag)
                 break;
         }
+       //The process gets finished up here 
     }
 }
