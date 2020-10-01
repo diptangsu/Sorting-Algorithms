@@ -3,37 +3,37 @@ using namespace std;
 
 void sort(int a[], int n) 
 { 
-	int max = *std::max_element(a, a + n); 
-	int min = abs(*std::min_element(a, a + n)); 
+	int max= *std::max_element(a, a+ n); 
+	int min= abs(*std::min_element(a, a+ n)); 
 
 	//creates hash function upto max size 
-	int pos[max + 1] = { 0 }; //positive
-	int neg[min + 1] = { 0 }; //negative
+	int pos[max+ 1]= { 0 }; //positive
+	int neg[min+ 1]= { 0 }; //negative
 
 	//count
-	for (int i = 0; i < n; i++) { 
-		if (a[i] >= 0) 
-			pos[a[i]] += 1; 
+	for (int i= 0; i< n; i++) { 
+		if (a[i]>= 0) 
+			pos[a[i]]+= 1; 
 		else
-			neg[abs(a[i])] += 1; 
+			neg[abs(a[i])]+= 1; 
 	} 
 
 	//prints present negative numbers according to their count
-	for (int i = min; i > 0; i--) { 
+	for (int i= min; i> 0; i--) { 
 		if (neg[i]) { 
 
-			for (int j = 0; j < neg[i]; j++) {				 
+			for (int j= 0; j< neg[i]; j++) {				 
 				cout << (-1) * i << " "; 
 			} 
 		} 
 	} 
 
 	//prints present positive numbers according to their count
-	for (int i = 0; i <= max; i++) { 
+	for (int i= 0; i<= max; i++) { 
 
 		if (pos[i]) { 
 
-			for (int j = 0; j < pos[i]; j++) { 
+			for (int j= 0; j< pos[i]; j++) { 
 				cout << i << " "; 
 			} 
 		} 
