@@ -50,6 +50,7 @@ func main() {
 	sort(arr, n, dir)
 	fmt.Println("Sorted Array:")
 	for _, x := range arr {
-		fmt.Println(x)
+		fmt.Printf("%d ", x)
 	}
+	fmt.Println()
 }
