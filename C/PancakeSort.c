@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
  
-void do_flip(int *, int, int);
+void doFlip(int *, int, int);
  
-int pancake_sort(int *list, unsigned int length)
+int pancakeSort(int *list, unsigned int length)
 {
     if (length < 2)
         return 0;
@@ -23,15 +23,15 @@ int pancake_sort(int *list, unsigned int length)
         if (max_num_pos)
         {
             moves++;
-            do_flip(list, length, max_num_pos + 1);
+            doFlip(list, length, max_num_pos + 1);
         }
-        do_flip(list, length, i);
+        doFlip(list, length, i);
     }
     return moves;
 }
  
 
-void do_flip(int *list,  int length,  int num)
+void doFlip(int *list,  int length,  int num)
 {
     int swap;
     int i = 0;
@@ -44,7 +44,7 @@ void do_flip(int *list,  int length,  int num)
 }
  
 
-void print_array(int list[], int length)
+void printArray(int list[], int length)
 {
     int i;
     for (i = 0;i < length;i++)
@@ -63,9 +63,9 @@ int main(int argc,  char **argv)
    for (i = 0;i < n;i++)
        scanf("%d", &list[i]);
    printf("\nOriginal: ");
-   print_array(list, n);
-   int moves  =  pancake_sort(list, n);
+   printArray(list, n);
+   int moves  =  pancakeSort(list, n);
    printf("\nSorted: ");
-   print_array(list, n);
+   printArray(list, n);
    printf(" - with a total of %d moves\n",  moves);
 }
