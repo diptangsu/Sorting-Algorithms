@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func compAndSwap(arr []int, x int, y int, dir int) {
-	if( (dir==1 && arr[x] > arr[y]) || (dir==0 && arr[x] < arr[y]) ) {
+	if((dir==1 && arr[x]>arr[y]) || (dir==0 && arr[x]<arr[y])) {
 		arr[x], arr[y] = arr[y], arr[x]
 	}
 }
@@ -31,7 +31,7 @@ func bitonicSort(arr []int, low int, count int, dir int) {
 }
 
 func sort(arr []int, n int, dir int) {
-	bitonicSort(arr, 0, n,dir)
+	bitonicSort(arr, 0, n, dir)
 }
 
 func main() {
