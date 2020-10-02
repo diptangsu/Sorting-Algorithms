@@ -3,11 +3,19 @@ package main
 import "fmt"
 
 func sort(arr []int, n int) {
-	for i:=1; i<n-1; i++ {
+	i := 0
+	for i<n-1 {
+		if(i == 0) {
+			i += 1
+		}
+		
+		if(arr[i] > arr[i-1]) {
+			i += 1
+		}
+		
 		if(arr[i] < arr[i-1]) {
 			arr[i], arr[i-1] = arr[i-1], arr[i]
-
-			i--
+			i -= 1
 		}
 	}
 }
