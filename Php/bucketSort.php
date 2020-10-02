@@ -1,5 +1,5 @@
 <?php
-function BucketSort(&$data)
+function bucketSort(&$data)
 {
     $min = $data[0];
     $max = $data[0];
@@ -36,5 +36,5 @@ function BucketSort(&$data)
 
 $arr = array(23, 45, 1, 67, 8, 4);
 
-BucketSort($arr);
+bucketSort($arr);
 print_r($arr);
