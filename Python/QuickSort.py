@@ -29,6 +29,8 @@ def partition(arr: List[T], low: int, high: int) -> int:
 # high  --> Ending index
 
 # Function to do Quick sort
+
+
 def quick_sort(arr: List[T], low: int, high: int):
     if low < high:
         # pi is partitioning index, arr[p] is now

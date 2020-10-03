@@ -38,6 +38,7 @@ def compare_algorithms(numbers) -> None:
     time_taken_sorted = dict(sorted(time_taken.items(), key=lambda kv: kv[1]))
     print_comparison(time_taken_sorted)
 
+
 if __name__ == '__main__':
     print('COMPARISON OF SORTING ALGORITHMS (fastest to slowest):')
     print('------------------------------------------------------')

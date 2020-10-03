@@ -2,7 +2,8 @@
 """
 from typing import List, TypeVar
 
-T = TypeVar('T', int, float)  # Create a generic type of T that can hold only numbers
+# Create a generic type of T that can hold only numbers
+T = TypeVar('T', int, float)
 
 
 def insertion_sort(arr: List[T]) -> List[T]:
