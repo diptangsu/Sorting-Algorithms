@@ -1,5 +1,8 @@
 # Sorting-Algorithms
-Sorting means to arrange a following set of numbers in ASCENDING/INCREASING/NON DECREASING or DESCENDING/DECREASING/NON INCREASING order, and we need certain algorithms in programming to implement the same.
+Sorting means to arrange a following set of numbers in ascending/increasing/non decreasing or descending/decreasing/non increasing order, and we need certain algorithms in programming to implement the same.
+
+[![DeepSource](https://deepsource.io/gh/diptangsu/Sorting-Algorithms.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/diptangsu/Sorting-Algorithms/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/diptangsu/Sorting-Algorithms.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/diptangsu/Sorting-Algorithms/?ref=repository-badge)
 
 # Various Sorting Algorithms are as follows:
 ## Bubble Sort
