@@ -1,9 +1,9 @@
 import random
 import time
+from typing import Dict
 
 from BinaryInsertionSort import insertion_sort
 from BubbleSort import bubble_sort
-
 
 SORT_FUNCTIONS = {
     'BINARY INSERTION SORT': insertion_sort,
@@ -15,19 +15,19 @@ random_numbers_sorted = sorted(random_numbers)
 random_numbers_reverse_sorted = sorted(random_numbers, reverse=True)
 
 
-def print_comparison(comparison):
-    largest_name_len = len(max(comparison.keys(), key=len))
+def print_comparison(comparison) -> None:
+    largest_name_len: int = len(max(comparison.keys(), key=len))
     largest_name_len += 6
 
-    heading = 'ALGORITHM'.ljust(largest_name_len) + 'TIME TAKEN'
+    heading: str = 'ALGORITHM'.ljust(largest_name_len) + 'TIME TAKEN'
     print(heading)
     print('-' * len(heading))
     for algo, time_taken in comparison.items():
         print(f'{algo:<{largest_name_len}}{time_taken}')
 
 
-def compare_algorithms(numbers):
-    time_taken = {}
+def compare_algorithms(numbers) -> None:
+    time_taken: Dict[str, float] = {}
     for algo_name, sorter in SORT_FUNCTIONS.items():
         start = time.perf_counter()
         sorter(numbers.copy())

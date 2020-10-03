@@ -1,11 +1,14 @@
 """Python3 program to sort an array
 """
+from typing import List, TypeVar
+
+T = TypeVar('T', int, float)  # Create a generic type of T that can hold only numbers
 
 
-def insertion_sort(arr):
+def insertion_sort(arr: List[T]) -> List[T]:
     for i in range(1, len(arr)):
-        up = arr[i]
-        j = i - 1
+        up: T = arr[i]
+        j: int = i - 1
         while j >= 0 and arr[j] > up:
             arr[j + 1] = arr[j]
             j -= 1
@@ -13,9 +16,9 @@ def insertion_sort(arr):
     return arr
 
 
-def bucket_sort(numbers):
-    arr = []
-    slot_num = 10  # 10 means 10 slots, each
+def bucket_sort(numbers: List[T]) -> List[T]:
+    arr: List[List[T]] = []
+    slot_num: int = 10  # 10 means 10 slots, each
     # slot's size is 0.1
     for i in range(slot_num):
         arr.append([])
@@ -30,7 +33,7 @@ def bucket_sort(numbers):
         arr[i] = insertion_sort(arr[i])
 
     # concatenate the result
-    k = 0
+    k: int = 0
     for i in range(slot_num):
         for j in range(len(arr[i])):
             numbers[k] = arr[i][j]

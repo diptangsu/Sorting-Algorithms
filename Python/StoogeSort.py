@@ -1,5 +1,10 @@
 # Python program to implement stooge sort
-def stoogesort(arr, l, h):
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
+
+
+def stoogesort(arr: List[T], l: int, h: int) -> None:
     if l >= h:
         return
 

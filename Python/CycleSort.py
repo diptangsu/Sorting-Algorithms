@@ -1,15 +1,18 @@
 # Python program to implement cycle sort
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
 
 
-def cycle_sort(array):
-    writes = 0
+def cycle_sort(array: List[T]) -> int:
+    writes: int = 0
 
     # Loop through the array to find cycles to rotate.
     for cycleStart in range(0, len(array) - 1):
-        item = array[cycleStart]
+        item: T = array[cycleStart]
 
         # Find where to put the item.
-        pos = cycleStart
+        pos: int = cycleStart
         for i in range(cycleStart + 1, len(array)):
             if array[i] < item:
                 pos += 1

@@ -1,8 +1,11 @@
 # Python program for implementation of CombSort
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
 
 
 # To find next gap from current
-def get_next_gap(gap):
+def get_next_gap(gap: int) -> int:
     # Shrink gap by Shrink factor
     gap = (gap * 10) // 13
     if gap < 1:
@@ -11,15 +14,15 @@ def get_next_gap(gap):
 
 
 # Function to sort arr[] using Comb Sort
-def combSort(arr):
-    n = len(arr)
+def combSort(arr: List[T]) -> None:
+    n: int = len(arr)
 
     # Initialize gap
-    gap = n
+    gap: int = n
 
     # Initialize swapped as true to make sure that
     # loop runs
-    swapped = True
+    swapped: bool = True
 
     # Keep running while gap is more than 1 and last
     # iteration caused a swap

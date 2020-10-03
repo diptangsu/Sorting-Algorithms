@@ -1,15 +1,16 @@
 # Python program to implement Pigeonhole Sort */
+from typing import List
 
 
-def pigeonhole_sort(a):
+def pigeonhole_sort(a: List[int]):
     # size of range of values in the list
     # (ie, number of pigeonholes we need)
-    my_min = min(a)
-    my_max = max(a)
-    size = my_max - my_min + 1
+    my_min: int = min(a)
+    my_max: int = max(a)
+    size: int = my_max - my_min + 1
 
     # our list of pigeonholes
-    holes = [0] * size
+    holes: List[int] = [0] * size
 
     # Populate the pigeonholes.
     for x in a:
@@ -17,7 +18,7 @@ def pigeonhole_sort(a):
         holes[x - my_min] += 1
 
     # Put the elements back into the array in order.
-    i = 0
+    i: int = 0
     for count in range(size):
         while holes[count] > 0:
             holes[count] -= 1

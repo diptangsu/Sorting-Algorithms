@@ -1,8 +1,13 @@
 """Python Program implementation of binary insertion sort
 """
 
+from typing import List, TypeVar
 
-def binary_search(arr, val, start, end):
+
+T = TypeVar('T')  # Create a generic type of T
+
+
+def binary_search(arr: List[T], val: T, start: int, end: int) -> int:
     # we need to distinguish whether we should insert
     # before or after the left boundary.
     # imagine [0] is the last step of the binary search
@@ -19,7 +24,7 @@ def binary_search(arr, val, start, end):
     if start > end:
         return start
 
-    mid = (start + end) // 2
+    mid: int = (start + end) // 2
     if arr[mid] < val:
         return binary_search(arr, val, mid + 1, end)
     elif arr[mid] > val:
@@ -28,10 +33,10 @@ def binary_search(arr, val, start, end):
         return mid
 
 
-def insertion_sort(arr):
+def insertion_sort(arr: List[T]) -> List[T]:
     for i in range(1, len(arr)):
-        val = arr[i]
-        j = binary_search(arr, val, 0, i - 1)
+        val: T = arr[i]
+        j: int = binary_search(arr, val, 0, i - 1)
         arr = arr[:j] + [val] + arr[j:i] + arr[i + 1:]
     return arr
 

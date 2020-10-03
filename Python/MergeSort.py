@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 
-from typing import List
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
 
 
 # Python program for the implementation of Merge Sort
-
-
-def merge(arr: List[int], aux: List[int], lo: int, mid: int, hi: int) -> None:
+def merge(arr: List[T], aux: List[T], lo: int, mid: int, hi: int) -> None:
     for x in range(lo, hi + 1):
         aux[x] = arr[x]
 
-    i = lo
-    j = mid + 1
+    i: int = lo
+    j: int = mid + 1
 
     for k in range(lo, hi + 1):
         if i > mid:
@@ -28,7 +28,7 @@ def merge(arr: List[int], aux: List[int], lo: int, mid: int, hi: int) -> None:
             i += 1
 
 
-def sort_util(arr: List[int], aux: List[int], lo: int, hi: int) -> None:
+def sort_util(arr: List[T], aux: List[T], lo: int, hi: int) -> None:
     if lo >= hi:
         return
 
@@ -39,16 +39,12 @@ def sort_util(arr: List[int], aux: List[int], lo: int, hi: int) -> None:
     merge(arr, aux, lo, mid, hi)
 
 
-def merge_sort(arr: List[int]) -> None:
+def merge_sort(arr: List[T]) -> None:
     aux = [0 for _ in range(len(arr))]
     sort_util(arr, aux, 0, len(arr) - 1)
 
 
-def main():
+if __name__ == "__main__":
     a = [9, 8, 1, 3, 0, 7, 6, 4, 5, 2]
     merge_sort(a)
     print(a)
-
-
-if __name__ == "__main__":
-    main()

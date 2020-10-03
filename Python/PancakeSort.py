@@ -3,9 +3,12 @@
 # pancake sort
 
 # Reverses arr[0..i]
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
 
 
-def flip(arr, i):
+def flip(arr: List[T], i: int) -> None:
     start = 0
     while start < i:
         temp = arr[start]
@@ -14,11 +17,12 @@ def flip(arr, i):
         start += 1
         i -= 1
 
+
 # Returns index of the maximum
 # element in arr[0..n-1]
 
 
-def find_max(arr, n):
+def find_max(arr: List[T], n: int) -> int:
     mi = 0
     for i in range(0, n):
         if arr[i] > arr[mi]:
@@ -30,18 +34,18 @@ def find_max(arr, n):
 # using flip operations
 
 
-def pancake_sort(arr):
-    n = len(arr)
+def pancake_sort(arr: List[T]) -> None:
+    n: int = len(arr)
     # Start from the complete
     # array and one by one
     # reduce current size
     # by one
-    curr_size = n
+    curr_size: int = n
     while curr_size > 1:
         # Find index of the maximum
         # element in
         # arr[0..curr_size-1]
-        mi = find_max(arr, curr_size)
+        mi: int = find_max(arr, curr_size)
 
         # Move the maximum element
         # to end of current array

@@ -2,19 +2,22 @@
 
 # The main function that sort the given string arr[] in
 # alphabetical order
+from typing import List, TypeVar
+
+T = TypeVar('T', int, float)  # Create a generic type of T
 
 
-def count_sort(arr):
+def count_sort(arr: str):
     # The output character array that will have sorted arr
-    output = [0 for _ in range(256)]
+    output: List[str] = ['' for _ in range(256)]
 
     # Create a count array to store count of inidividul
     # characters and initialize count array as 0
-    count = [0 for _ in range(256)]
+    count: List[int] = [0 for _ in range(256)]
 
     # For storing the resulting answer since the
     # string is immutable
-    ans = ['' for _ in arr]
+    ans: List[str] = ['' for _ in arr]
 
     # Store count of each character
     for i in arr:

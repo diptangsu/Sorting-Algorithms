@@ -1,11 +1,14 @@
 # Python program for implementation of Cocktail Sort
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
 
 
-def cocktail_sort(a):
-    n = len(a)
-    swapped = True
-    start = 0
-    end = n - 1
+def cocktail_sort(a: List[T]) -> None:
+    n: int = len(a)
+    swapped: bool = True
+    start: int = 0
+    end: int = n - 1
     while swapped:
 
         # reset the swapped flag on entering the loop,
