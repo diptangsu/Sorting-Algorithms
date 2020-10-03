@@ -38,15 +38,15 @@ def compare_algorithms(numbers):
     time_taken_sorted = dict(sorted(time_taken.items(), key=lambda kv: kv[1]))
     print_comparison(time_taken_sorted)
 
+if __name__ == '__main__':
+    print('COMPARISON OF SORTING ALGORITHMS (fastest to slowest):')
+    print('------------------------------------------------------')
+    print(f'Length of list: {len(random_numbers)}')
+    print('\nElements randomly distributed:')
+    compare_algorithms(random_numbers)
 
-print('COMPARISON OF SORTING ALGORITHMS (fastest to slowest):')
-print('------------------------------------------------------')
-print(f'Length of list: {len(random_numbers)}')
-print('\nElements randomly distributed:')
-compare_algorithms(random_numbers)
+    print('\nElements sorted:')
+    compare_algorithms(random_numbers_sorted)
 
-print('\nElements sorted:')
-compare_algorithms(random_numbers_sorted)
-
-print('\nElements reverse sorted:')
-compare_algorithms(random_numbers_reverse_sorted)
+    print('\nElements reverse sorted:')
+    compare_algorithms(random_numbers_reverse_sorted)
