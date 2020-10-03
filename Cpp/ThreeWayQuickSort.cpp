@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-pair<int,int> Partition(vector<int> &v1, int l, int r) {
+pair<int,int> partition(vector<int> &v1, int l, int r) {
   int i,j;
   if (r - l <= 1) {
      if (v1[r] < v1[l])
@@ -27,7 +27,7 @@ pair<int,int> Partition(vector<int> &v1, int l, int r) {
   return make_pair(i,j);
 }
 
-void randomized_quick_sort(vector<int> &v1, int l, int r) {
+void randomizedQuickSort(vector<int> &v1, int l, int r) {
 
   if( r <= l)
     return ;
@@ -36,10 +36,10 @@ void randomized_quick_sort(vector<int> &v1, int l, int r) {
   // swap with element at l so that our normal partion function works
   swap(v1[l], v1[n]);
 
-  pair<int, int> p1 = Partition(v1, l, r);
+  pair<int, int> p1 = partition(v1, l, r);
 
-  randomized_quick_sort(v1, l, p1.first);
-  randomized_quick_sort(v1, p1.second, r);
+  randomizedQuickSort(v1, l, p1.first);
+  randomizedQuickSort(v1, p1.second, r);
 
 }
 
@@ -51,7 +51,7 @@ int main() {
   for (size_t i = 0; i < a.size(); ++i) {
     cin >> a[i];
   }
-  randomized_quick_sort(a, 0, a.size() - 1);
+  randomizedQuickSort(a, 0, a.size() - 1);
 
   for (size_t i = 0; i < a.size(); ++i) {
     cout << a[i] << ' ';
