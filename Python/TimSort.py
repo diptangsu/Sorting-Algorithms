@@ -1,14 +1,16 @@
 # Python3 program to perform TimSort.
+from typing import List, TypeVar
+
 RUN = 32
+T = TypeVar('T')  # Create a generic type of T
+
 
 # This function sorts array from left index to
 # to right index which is of size atmost RUN
-
-
-def insertion_sort(arr, left, right):
+def insertion_sort(arr: List[T], left: int, right: int) -> None:
     for i in range(left + 1, right + 1):
-        temp = arr[i]
-        j = i - 1
+        temp: T = arr[i]
+        j: int = i - 1
 
         while arr[j] > temp and j >= left:
             arr[j + 1] = arr[j]
@@ -18,7 +20,7 @@ def insertion_sort(arr, left, right):
 
 
 # merge function merges the sorted runs
-def merge(arr, l, m, r):
+def merge(arr: List[T], l: int, m: int, r: int) -> None:
     # original array is broken in two parts
     # left and right array
     len1, len2 = m - l + 1, r - m
@@ -53,12 +55,13 @@ def merge(arr, l, m, r):
         k += 1
         j += 1
 
+
 # iterative Timsort function to sort the
 # array[0...n-1] (similar to merge sort)
 
 
-def tim_sort(arr):
-    n = len(arr)
+def tim_sort(arr: List[T]) -> None:
+    n: int = len(arr)
     # Sort individual subarrays of size RUN
     for i in range(0, n, RUN):
         insertion_sort(arr, i, min((i + 31), (n - 1)))

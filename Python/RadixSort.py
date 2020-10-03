@@ -1,17 +1,19 @@
 # Python program for implementation of Radix Sort
+from typing import List
+
 
 # A function to do counting sort of arr[] according to
 # the digit represented by exp.
 
 
-def counting_sort(arr, exp1):
-    n = len(arr)
+def counting_sort(arr: List[int], exp1: int):
+    n: int = len(arr)
 
-    # The output array elements that will have sorted arr
-    output = [0] * (n)
+    # inthe output array elements that will have sorted arr
+    output: List[int] = [0] * n
 
     # initialize count array as 0
-    count = [0] * (10)
+    count: List[int] = [0] * 10
 
     # Store count of occurrences in count[]
     for i in range(0, n):
@@ -24,7 +26,7 @@ def counting_sort(arr, exp1):
         count[i] += count[i - 1]
 
     # Build the output array
-    i = n - 1
+    i: int = n - 1
     while i >= 0:
         index = arr[i] // exp1
         output[count[index % 10] - 1] = arr[i]
@@ -39,14 +41,14 @@ def counting_sort(arr, exp1):
 
 
 # Method to do Radix Sort
-def radix_sort(arr):
+def radix_sort(arr: List[int]):
     # Find the maximum number to know number of digits
-    max1 = max(arr)
+    max1: int = max(arr)
 
     # Do counting sort for every digit. Note that instead
     # of passing digit number, exp is passed. exp is 10ⁱ
     # where i is current digit number
-    exp = 1
+    exp: int = 1
     while max1 / exp > 0:
         counting_sort(arr, exp)
         exp *= 10

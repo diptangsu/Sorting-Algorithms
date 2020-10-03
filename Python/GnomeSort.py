@@ -1,11 +1,13 @@
 # Python program to implement Gnome Sort
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
+
 
 # A function to sort the given list using Gnome sort
-
-
-def gnome_sort(arr):
-    index = 0
-    n = len(arr)
+def gnome_sort(arr: List[T]) -> List[T]:
+    index: int = 0
+    n: int = len(arr)
     while index < n:
         if index == 0:
             index = index + 1

@@ -1,13 +1,16 @@
 """Python3 Optimized implementation of Bubble sort
 """
+from typing import List, TypeVar
+
+T = TypeVar('T')  # Create a generic type of T
 
 
-def bubble_sort(arr):
-    n = len(arr)
+def bubble_sort(arr: List[T]) -> None:
+    n: int = len(arr)
 
     # Traverse through all array elements
     for i in range(n):
-        swapped = False
+        swapped: bool = False
 
         # Last i elements are already in place
         for j in range(0, n - i - 1):
