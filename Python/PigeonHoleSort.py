@@ -13,8 +13,8 @@ def pigeonhole_sort(a):
 
     # Populate the pigeonholes.
     for x in a:
-        if type(x) is not int:
-            raise AssertionError("integers only please")
+        if not isinstance(x, int):
+            raise ValueError(f'{x} is not an integer')
         holes[x - my_min] += 1
 
     # Put the elements back into the array in order.
