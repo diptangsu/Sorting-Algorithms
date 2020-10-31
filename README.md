@@ -343,5 +343,11 @@ The Stooge sort is a recursive sorting algorithm. It is defined for ascending or
 Merge sort involves recursively splitting the array into 2 parts, sorting and finally merging them. A variant of merge sort is called 3-way merge sort where instead of splitting the array into 2 parts we split it into 3 parts.
 Merge sort recursively breaks down the arrays to subarrays of size half. Similarly, 3-way Merge sort breaks down the arrays to subarrays of size one third.
 
+
+## String sort
+String sort the sort the string the accordint to the dictionary order according to their size and in lexicographical order
+
+
+
 ## Contributing
 To start contributing, check out [CONTRIBUTING.md](https://github.com/diptangsu/Sorting-Algorithms/blob/master/CONTRIBUTING.md). New contributors are always welcome to support this project. Check out issues labelled as `Hacktoberfest` if you are up for some grabs! :)
