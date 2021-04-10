@@ -1,4 +1,5 @@
 #include <iostream>
+#include "sorting_algorithms.h"
 
 using namespace std;
 
@@ -70,26 +71,8 @@ MergeSort (int *a, int low, int high)
     }
 }
 
-int
-main ()
+void 
+MergeSort (int* a, int n)
 {
-  int n, i;
-  cout << "\nEnter the number of data element to be sorted: ";
-  cin >> n;
-
-  int arr[n];
-  for (i = 0; i < n; i++)
-    {
-      cout << "Enter element " << i + 1 << ": ";
-      cin >> arr[i];
-    }
-
-  MergeSort (arr, 0, n - 1);
-
-  // Printing the sorted data.
-  cout << "\nSorted Data ";
-  for (i = 0; i < n; i++)
-    cout << "->" << arr[i];
-
-  return 0;
+	MergeSort(a, 0, n - 1);
 }

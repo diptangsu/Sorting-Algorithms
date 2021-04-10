@@ -1,0 +1,10 @@
+enum SortType {
+	BUBBLE,
+	COUNT,
+	CYCLE,
+	HEAP,
+	INSERTION,
+	MERGE,
+	QUICK,
+	SELECTION
+};

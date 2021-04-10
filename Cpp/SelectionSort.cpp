@@ -1,12 +1,7 @@
 #include <bits/stdc++.h> 
-using namespace std; 
+#include "sorting_algorithms.h"
 
-void swap(int *xp, int *yp) 
-{ 
-	int temp = *xp; 
-	*xp = *yp; 
-	*yp = temp; 
-} 
+using namespace std; 
 
 void selectionSort(int arr[], int n) 
 { 
@@ -22,29 +17,10 @@ void selectionSort(int arr[], int n)
 			min_idx = j; 
 
 		// Swap the found minimum element with the first element 
-		swap(&arr[min_idx], &arr[i]); 
+		swap(arr[min_idx], arr[i]); 
 	} 
 } 
 
-/* Function to print an array */
-void printArray(int arr[], int size) 
-{ 
-	int i; 
-	for (i=0; i < size; i++) 
-		cout << arr[i] << " "; 
-	cout << endl; 
-} 
-
-// Driver program to test above functions 
-int main() 
-{ 
-	int arr[] = {64, 25, 12, 22, 11}; 
-	int n = sizeof(arr)/sizeof(arr[0]); 
-	selectionSort(arr, n); 
-	cout << "Sorted array: \n"; 
-	printArray(arr, n); 
-	return 0; 
-} 
 
 
 
