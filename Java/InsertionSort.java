@@ -1,35 +1,42 @@
-import java.util.Scanner;
+// Java program for implementation of Insertion Sort 
+class InsertionSort { 
+	/*Function to sort array using insertion sort*/
+	void sort(int arr[]) 
+	{ 
+		int n = arr.length; 
+		for (int i = 1; i < n; ++i) { 
+			int key = arr[i]; 
+			int j = i - 1; 
 
-public class InsertionSort {
+			/* Move elements of arr[0..i-1], that are 
+			greater than key, to one position ahead 
+			of their current position */
+			while (j >= 0 && arr[j] > key) { 
+				arr[j + 1] = arr[j]; 
+				j = j - 1; 
+			} 
+			arr[j + 1] = key; 
+		} 
+	} 
 
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of elements : ");
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-        System.out.println("Enter " + n + " elements :");
-        for (int i = 0; i < n; i++)
-            arr[i] = sc.nextInt();
+	/* A utility function to print array of size n*/
+	static void printArray(int arr[]) 
+	{ 
+		int n = arr.length; 
+		for (int i = 0; i < n; ++i) 
+			System.out.print(arr[i] + " "); 
 
-        insertionSort(arr);
+		System.out.println(); 
+	} 
 
-        System.out.println("\nThe sorted array : ;");
-        for (int i = 0; i < n; i++)
-            System.out.print(arr[i] + " ");
-        System.out.println();
-    }
+	// Driver method 
+	public static void main(String args[]) 
+	{ 
+		int arr[] = { 12, 11, 13, 5, 6 }; 
 
-    static void insertionSort(int arr[]) {
-        int len = arr.length, tmp, j;
-        for (int i = 1; i < len; i++) {
-            tmp = arr[i];
-            for (j = i; j > 0; j--) {
-                if (arr[j - 1] > tmp)
-                    arr[j] = arr[j - 1];
-                else
-                    break;
-            }
-            arr[j] = tmp;
-        }
-    }
+		InsertionSort ob = new InsertionSort(); 
+		ob.sort(arr); 
+
+		printArray(arr); 
+	} 
 }
