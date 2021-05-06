@@ -8,6 +8,7 @@ array.map!(&:to_i)
 puts 'Your unsorted numbers'
 p array
 
+# Quick Sort algorithm
 class QuickSort
   class << self
     def sort(array, first, last)
