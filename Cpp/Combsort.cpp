@@ -1,7 +1,7 @@
 #include<bits/stdc++.h> 
 using namespace std; 
 
-int Comb_Sort(int arr[], int n) 
+int CombSort(int arr[], int n) 
 { 
   int gap = n; 
 
