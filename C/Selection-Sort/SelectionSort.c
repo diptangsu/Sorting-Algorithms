@@ -7,7 +7,7 @@ int main(void)
     {
         printf("how many  array's elements you want: ");
         scanf("%d", &SIZE);
-    } while(SIZE >= 20); // max = 20
+    } while(SIZE > 20); // max = 20
 
     // memory allocation for array in heap segement
     int *array = malloc(SIZE * sizeof(int));
@@ -31,8 +31,7 @@ void array_init(int *array, int SIZE)
 
 void array_print(int *array, int SIZE)
 {
-    int i;
-    for(i = 0 ; i < SIZE ; i++)
+    for(int i = 0 ; i < SIZE ; i++)
     {
         printf("%d ", *(array+i));
     }
