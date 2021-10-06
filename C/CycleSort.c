@@ -77,16 +77,16 @@ int main(int argc, char ** argv)
   int arr_k = sizeof(arr) / sizeof(arr[0]);
   int writes, i;
   printf("Original Array:\n");
-  show_array(arr, arr_k);
+  showArray(arr, arr_k);
   writes = cycleSort(arr, arr_k);
   printf("\nSorted Array:\n");
-  show_array(arr, arr_k);
+  showArray(arr, arr_k);
   printf("writes: %d\n", writes);
  
   return 0;
 }
 
-void show_array(int * array, size_t a_len)
+void showArray(int * array, size_t a_len)
 {
   int ix;
   for (ix = 0; ix < a_len; ++ix)
