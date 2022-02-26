@@ -1,3 +1,7 @@
+""" Python 3's implementation of StalinSort (O(N))
+"""
+
+
 def stalin_sort(lis):
     i = 0
 
