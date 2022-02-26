@@ -22,6 +22,6 @@ def stalin_sort(lis):
 
 # Driver code 
 if __name__ == '__main__':
-    lis = [20 ,0 ,1 ,188 ,20 ,100 ,2 ,10]
-    print(f"Uncorrected list: {lis}")
-    print(f"Corrected list: {stalin_sort(lis)}")
+    example_lis = [20 ,0 ,1 ,188 ,20 ,100 ,2 ,10]
+    print(f"Uncorrected list: {example_lis}")
+    print(f"Corrected list: {stalin_sort(example_lis)}")
