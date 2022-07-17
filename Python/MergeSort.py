@@ -1,12 +1,7 @@
-#!/usr/bin/env python3
-
-from typing import List
-
-
 # Python program for the implementation of Merge Sort
 
 
-def merge(arr: List[int], aux: List[int], lo: int, mid: int, hi: int) -> None:
+def merge(arr: list[int], aux: list[int], lo: int, mid: int, hi: int) -> None:
     for x in range(lo, hi + 1):
         aux[x] = arr[x]
 
@@ -28,7 +23,7 @@ def merge(arr: List[int], aux: List[int], lo: int, mid: int, hi: int) -> None:
             i += 1
 
 
-def sort_util(arr: List[int], aux: List[int], lo: int, hi: int) -> None:
+def sort_util(arr: list[int], aux: list[int], lo: int, hi: int) -> None:
     if lo >= hi:
         return
 
@@ -39,7 +34,7 @@ def sort_util(arr: List[int], aux: List[int], lo: int, hi: int) -> None:
     merge(arr, aux, lo, mid, hi)
 
 
-def merge_sort(arr: List[int]) -> None:
+def merge_sort(arr: list[int]) -> None:
     aux = [0 for _ in range(len(arr))]
     sort_util(arr, aux, 0, len(arr) - 1)
 
