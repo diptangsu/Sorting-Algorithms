@@ -4,7 +4,6 @@
 def merge(arr: list[int], aux: list[int], lo: int, mid: int, hi: int) -> None:
     for x in range(lo, hi + 1):
         aux[x] = arr[x]
-
     i = lo
     j = mid + 1
 
@@ -26,17 +25,16 @@ def merge(arr: list[int], aux: list[int], lo: int, mid: int, hi: int) -> None:
 def sort_util(arr: list[int], aux: list[int], lo: int, hi: int) -> None:
     if lo >= hi:
         return
-
     mid = lo + (hi - lo) // 2
 
     sort_util(arr, aux, lo, mid)
     sort_util(arr, aux, mid + 1, hi)
+
     merge(arr, aux, lo, mid, hi)
 
 
 def merge_sort(arr: list[int]) -> None:
-    aux = [0 for _ in range(len(arr))]
-    sort_util(arr, aux, 0, len(arr) - 1)
+    sort_util(arr, [0 for _ in range(len(arr))], 0, len(arr) - 1)
 
 
 def main():

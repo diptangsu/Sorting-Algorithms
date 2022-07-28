@@ -1,12 +1,9 @@
 # Python program for implementation of Selection Sort
-from typing import TypeVar
-
-# Declare generic type for the sort function input
-T = TypeVar("T")
+from typing import Any
 
 
 # Function to do selection sort
-def selection_sort(arr: list[T]) -> None:
+def selection_sort(arr: list[Any]) -> None:
     # Traverse through all array elements
     for i in range(len(arr)):
         # Find the minimum element in remaining
