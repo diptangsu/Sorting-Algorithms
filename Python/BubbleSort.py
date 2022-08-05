@@ -9,7 +9,7 @@ def bubble_sort(arr):
         swapped = False
 
         # Last i elements are already in place
-        for j in range(0, n - i - 1):
+        for j in range(n - i - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swapped = True
